@@ -1,0 +1,1 @@
+The simulation scenario has four peers (A,B,C and D). The peer A will send a multicast Interest with the name "/prefix/node/D". All B, C and D has the same producer prefix "/prefix/node" and every peer will receive the Interest but only peer D will respond with the data packet.
