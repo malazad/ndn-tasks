@@ -109,9 +109,6 @@ Producer::OnInterest(shared_ptr<const Interest> interest)
   // dataName.appendVersion();
   auto intendedProducer  = dataName.getSubName(2,1);	//.toUri().substr(1,1),c_str();
 
-  //NS_LOG_INFO("The intended producer is : " << intendedProducer);
-  //NS_LOG_INFO("The comparison is : " << intendedProducer.equals(m_producerName));
-
   if(intendedProducer.equals(m_producerName))
 	  if(interest->hasParameters())
 	  {
