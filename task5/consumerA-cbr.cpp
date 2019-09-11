@@ -86,7 +86,7 @@ ConsumerACbr::ScheduleNextPacket()
     m_firstTime = false;
   }
   else if (!m_sendEvent.IsRunning())
-    m_sendEvent = Simulator::Schedule(Seconds(0.5),&ConsumerA::SendPacket, this);
+    m_sendEvent = Simulator::Schedule(Seconds(0.2),&ConsumerA::SendPacket, this);
 }
 
 void
