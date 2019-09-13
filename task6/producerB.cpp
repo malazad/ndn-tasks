@@ -103,14 +103,9 @@ ProducerB::OnInterest(shared_ptr<const Interest> interest)
 
   Name dataName(interest->getName());
 
-  NS_LOG_INFO("Done 1");
-  NS_LOG_INFO("Done 2 = " << dataName.getSubName(0,3));
-
   if(dataName.getSubName(0,3).equals("/prefix/sync/local") && m_isDataReceived)
   {
 
-	   NS_LOG_INFO("Done 3");
-	   NS_LOG_INFO("Done 4");
 	   m_isDataReceived = false;
 	   auto data = make_shared<Data>();
 	   data->setName(dataName);
@@ -151,10 +146,6 @@ ProducerB::OnInterest(shared_ptr<const Interest> interest)
 	   m_isDataReceived = true;
 
   }
-
-
-
-
 
 }
 
